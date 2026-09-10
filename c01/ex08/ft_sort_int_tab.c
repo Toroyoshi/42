@@ -6,25 +6,25 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 17:11:41 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/10 20:17:11 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/10 20:37:14 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_sort_int_tab(int *tab, int size);
+void	ft_sort_int_tab(int *tab, int size);
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int i;
-	int j;
-	int temp;
-	
+	int	i;
+	int	j;
+	int	temp;
+
 	j = 0;
 	while (j < size)
 	{
 		i = 0;
 		while (i < size - 1)
 		{
-			if(tab[i] >= tab[i + 1])
+			if (tab[i] >= tab[i + 1])
 			{
 				temp = tab[i];
 				tab[i] = tab[i + 1];

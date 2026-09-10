@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 19:40:27 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/08 19:45:15 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/10 20:33:03 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	ft_ultimate_ft(int *********nbr)
 // 	ptr7 = &ptr6;
 // 	ptr8 = &ptr7;
 // 	ptr9 = &ptr8;
-	
+
 // 	printf("%d\n", a);
-	
+
 // 	ft_ultimate_ft(ptr9);
-	
+
 // 	printf("%d\n", a);
 // 	return (0);
 // }
