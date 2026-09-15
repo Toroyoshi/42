@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/14 19:22:21 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 15:27:30 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/15 15:46:04 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/15 15:51:52 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_alpha(char *str)
+int ft_str_is_uppercase(char *str)
 {
-    int i;
+	int i;
 
     i = 0;
 	while (str[i] != '\0')
 	{
-		if((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+		if((str[i] >= 'A' && str[i] <= 'Z'))
 		{
 			i++;
 		}
@@ -25,7 +25,6 @@ int ft_str_is_alpha(char *str)
 		{
 			return (0);
 		}
-		
     }
 	return (1);
 }
@@ -35,8 +34,7 @@ int ft_str_is_alpha(char *str)
 // {
 // 	int resultado;
 	
-// 	resultado = ft_str_is_alpha("grnrsgsdnFoi");
-
+// 	resultado = ft_str_is_uppercase("HDIUWGAOYFVLBLABFEIGAE");
 // 	printf("Result is: %d\n", resultado);
 // 	return (0);
 // }

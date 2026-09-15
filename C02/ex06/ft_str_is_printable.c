@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/14 19:22:21 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 15:27:30 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/15 15:54:46 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_alpha(char *str)
+int ft_str_is_printable(char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+		if((str[i] >= ' ' && str[i] <= '~') || str[i] == 011) // tab mbe
 		{
 			i++;
 		}
@@ -25,18 +25,16 @@ int ft_str_is_alpha(char *str)
 		{
 			return (0);
 		}
-		
     }
 	return (1);
 }
 
-// #include <stdio.h>
-// int main (void)
-// {
-// 	int resultado;
+#include <stdio.h>
+int main (void)
+{
+	int resultado;
 	
-// 	resultado = ft_str_is_alpha("grnrsgsdnFoi");
-
-// 	printf("Result is: %d\n", resultado);
-// 	return (0);
-// }
+	resultado = ft_str_is_printable("HDIUWGA OYFVLB`~	 LABFEIGAE");
+	printf("Result is: %d\n", resultado);
+	return (0);
+}
