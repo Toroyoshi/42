@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 18:52:44 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/09 18:05:19 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/20 18:49:00 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= ' ' && str[i] <= '~') || str[i] == 011)
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
+		write (1, &str[i], 1);
+		i++;
 	}
-	return (1);
 }
 
-// #include <stdio.h>
-// int main (void)
+// void	ft_putstr(char *str)
 // {
-// 	int resultado;
-// 	// char arr2[] = {'a', 'b', 0x03,'\0'}; // If you wanna test in other way
+// 	int	i;
 
-// 	resultado = ft_str_is_printable("arr2 \x7F");
-// 	printf("Result is: %d\n", resultado);
+// 	i = 0;
+// 	while (str[i] != '\0')
+// 	{
+// 		i++;
+// 	}
+// 	write(1, str, i);
+// }
+
+// int	main(void)
+// {
+// 	char *test = "test";
+// 	ft_putstr(test);
 // 	return (0);
 // }

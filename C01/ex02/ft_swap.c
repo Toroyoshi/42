@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 18:52:44 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/08 19:45:40 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/20 18:45:09 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
-{
-	int	i;
+void	ft_swap(int *a, int *b);
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= ' ' && str[i] <= '~') || str[i] == 011)
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+void	ft_swap(int *a, int *b)
+{
+	int	t;
+
+	t = *a;
+	*a = *b;
+	*b = t;
 }
 
 // #include <stdio.h>
-// int main (void)
-// {
-// 	int resultado;
-// 	// char arr2[] = {'a', 'b', 0x03,'\0'}; // If you wanna test in other way
 
-// 	resultado = ft_str_is_printable("arr2 \x7F");
-// 	printf("Result is: %d\n", resultado);
+// int main(void)
+// {
+//     int a;
+//     int b;
+//     a = 42;
+//     b = 69;
+//    
+//     printf("antes: a = %d, b = %d\n", a, b);
+// 	ft_swap(&a, &b);
+// 	printf("depois: a = %d, b = %d\n", a, b);
 // 	return (0);
 // }

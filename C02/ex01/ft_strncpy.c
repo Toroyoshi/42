@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 16:44:42 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 15:25:39 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/20 16:41:21 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,19 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+
 // #include <stdio.h>
 // int main(void)
 // {
 // 	char *teste;
 // 	char *resultado;
-// 	teste = "is it woking???";
+// 	teste = "Is it woking???";
 
 // 	unsigned	int j;
 //     unsigned	int	p;
 // 	unsigned	int i;
 
-//     p = 20;
+//     p = 5;
 // 	j = 0;
 // 	i = 0;
 // 	while (j <= p){
@@ -49,8 +50,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 // 	char dest[j];
 // 	resultado = ft_strncpy(dest, teste, p);
 // 	printf("%s\n", resultado);
-// 	while (i < p){
-// 		printf("%d\n", i);	
-// 		i++;
-// 	}
+// 	// while (i < p){
+// 	// 	printf("%d\n", i);	
+// 	// 	i++;
+// 	// }
 // }

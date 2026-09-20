@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 18:52:44 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/08 19:39:06 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/20 18:44:44 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
-{
-	int	i;
+void	ft_ft(int *nbr);
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= ' ' && str[i] <= '~') || str[i] == 011)
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+void	ft_ft(int *nbr)
+{
+	*nbr = 42;
 }
 
 // #include <stdio.h>
-// int main (void)
-// {
-// 	int resultado;
-// 	// char arr2[] = {'a', 'b', 0x03,'\0'}; // If you wanna test in other way
 
-// 	resultado = ft_str_is_printable("arr2 \x7F");
-// 	printf("Result is: %d\n", resultado);
-// 	return (0);
+// int main(void)
+// {
+//     int a;
+// 	a = 67;
+// 	printf("%d\n", a);
+
+// 	ft_ft(&a);
+// 	printf("%d\n", a);
+
+//     return (0);
 // }

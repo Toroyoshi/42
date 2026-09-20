@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 18:52:44 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/08 20:08:03 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/10 20:19:50 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
-{
-	int	i;
+void	ft_ultimate_div_mod(int *a, int *b);
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= ' ' && str[i] <= '~') || str[i] == 011)
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+void	ft_ultimate_div_mod(int *a, int *b)
+{
+	int	div;
+	int	mod;
+
+	div = *a / *b;
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
 }
 
 // #include <stdio.h>
-// int main (void)
-// {
-// 	int resultado;
-// 	// char arr2[] = {'a', 'b', 0x03,'\0'}; // If you wanna test in other way
 
-// 	resultado = ft_str_is_printable("arr2 \x7F");
-// 	printf("Result is: %d\n", resultado);
-// 	return (0);
+// int main(void)
+// {
+//     int a;
+//     int b;
+
+//     a = 69;
+//     b = 42;
+//     ft_ultimate_div_mod(&a, &b);
+//     printf("div: %d, mod: %d\n", a, b);
+//     return (0);
 // }

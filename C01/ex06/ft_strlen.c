@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 18:52:44 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/09 19:51:41 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/10 16:28:07 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+#include <stdio.h>
+
+int	ft_strlen(char *str);
+
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= ' ' && str[i] <= '~') || str[i] == 011)
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
+		i++;
 	}
-	return (1);
+	return (0);
 }
 
-// #include <stdio.h>
-// int main (void)
+// int main(void)
 // {
-// 	int resultado;
-// 	// char arr2[] = {'a', 'b', 0x03,'\0'}; // If you wanna test in other way
-
-// 	resultado = ft_str_is_printable("arr2 \x7F");
-// 	printf("Result is: %d\n", resultado);
-// 	return (0);
+// 	char *test = "eu vou testar esse bagulho todo.";
+// 	ft_strlen(test);
+// 	return 0;
 // }

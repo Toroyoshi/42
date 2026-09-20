@@ -6,18 +6,18 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 15:43:34 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 15:45:25 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/15 18:54:39 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_lowercase(char *str)
+int	ft_str_is_lowercase(char *str)
 {
-	int i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if((str[i] >= 'a' && str[i] <= 'z'))
+		if ((str[i] >= 'a' && str[i] <= 'z'))
 		{
 			i++;
 		}
@@ -25,7 +25,7 @@ int ft_str_is_lowercase(char *str)
 		{
 			return (0);
 		}
-    }
+	}
 	return (1);
 }
 
@@ -33,7 +33,7 @@ int ft_str_is_lowercase(char *str)
 // int main (void)
 // {
 // 	int resultado;
-	
+
 // 	resultado = ft_str_is_lowercase("zyxwdjaewhiuawnfkbewla");
 // 	printf("Result is: %d\n", resultado);
 // 	return (0);
