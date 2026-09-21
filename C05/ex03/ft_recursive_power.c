@@ -1,45 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 19:29:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:46:47 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/21 18:16:01 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/21 18:20:54 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2);
+int	ft_recursive_power(int nb, int power);
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_recursive_power(int nb, int power)
 {
-	int	i;
+	int	base;
 
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	base = nb;
+	if (power < 0)
 	{
-		if (s1[i] - s2[i] < 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] - s2[i] > 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else
-		{
-			i++;
-		}
+		return (0);
 	}
-	return (0);
+	if (power == 0)
+	{
+		return (1);
+	}
+	return(base * ft_recursive_power(nb, power - 1));
 }
 
 // #include <stdio.h>
-// int main (void)
+// int	main(void)
 // {
-// 	int r;
-// 	r = ft_strcmp("-", "Oi");
-// 	printf("%d", r);
-// 	return 0;
+// 	int	n;
+// 	int p;
+// 	int	t;
+
+// 	n = 2;
+// 	p = 2;
+// 	t = ft_recursive_power(n, p);
+// 	printf("resultado: %d", t);
+
+// 	return (0);
 // }

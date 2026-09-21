@@ -1,45 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 19:29:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:46:47 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/21 20:07:09 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/21 21:41:56 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2);
-
-int	ft_strcmp(char *s1, char *s2)
+int	ft_fibonacci(int index)
 {
 	int	i;
-
+	int r;
+	
 	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	if (i < 0)
 	{
-		if (s1[i] - s2[i] < 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] - s2[i] > 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else
-		{
-			i++;
-		}
+		return (-1);
 	}
-	return (0);
+	if (i == 0)
+	{
+		return (0);
+	}
+	if (i == 1)
+	{
+		return (1);
+	}
+	while (index >= 0)
+	{
+		r = ft_fibonacci(n) + ft_fibonacci(n - 1);
+	}
 }
-
-// #include <stdio.h>
-// int main (void)
-// {
-// 	int r;
-// 	r = ft_strcmp("-", "Oi");
-// 	printf("%d", r);
-// 	return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 15:21:18 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/07 21:07:41 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/14 15:40:11 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_putchar(char c)
 // int	main(void)
 // {
 // 	ft_putchar('A');
+// 	ft_putchar('B');
 // 	ft_putchar('\n');
 // 	return (0);
 // }

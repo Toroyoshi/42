@@ -6,21 +6,26 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 17:17:58 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/20 20:49:11 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/21 16:50:45 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str);
 
-int	turn_sign(char str)
+int	pt_sign(char str)
 {
-	int	sign;
+	int	i;
 
-	sign = 1;
+	i = 1;
 	if (str == '-')
 	{
-		sign = (-sign);
+		i = -i;
 	}
+	else
+	{
+		i = 1;
+	}
+	return (i);
 }
 
 int	ft_atoi(char *str)
@@ -32,7 +37,6 @@ int	ft_atoi(char *str)
 
 	i = 0;
 	n = 0;
-	r = 0;
 	sign = 1;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v')
 	{
@@ -40,7 +44,8 @@ int	ft_atoi(char *str)
 	}
 	while ((str[i] == '-') || (str[i] == '+'))
 	{
-		sign(str[i]);
+		sign = sign * pt_sign(str[i]);
+		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -56,7 +61,7 @@ int	ft_atoi(char *str)
 
 // int	main(void)
 // {
-// 	char	str[] = "   -+--1234a567";
+// 	char	str[] = "   -+-123";
 // 	int		resultado;
 
 // 	resultado = ft_atoi(str);

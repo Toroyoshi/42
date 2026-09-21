@@ -1,45 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 19:29:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:46:47 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/21 17:46:38 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/21 18:10:02 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2);
+int	ft_iterative_power(int nb, int power);
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_iterative_power(int nb, int power)
 {
-	int	i;
+	int	base;
 
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	base = nb;
+	if (power < 0)
 	{
-		if (s1[i] - s2[i] < 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] - s2[i] > 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else
-		{
-			i++;
-		}
+		return (0);
 	}
-	return (0);
+	if (power == 0)
+	{
+		return (1);
+	}
+	while (power > 1)
+	{
+		nb = base * nb;
+		power--;
+	}
+	return (nb);
 }
 
 // #include <stdio.h>
-// int main (void)
+// int	main(void)
 // {
-// 	int r;
-// 	r = ft_strcmp("-", "Oi");
-// 	printf("%d", r);
-// 	return 0;
+// 	int	n;
+// 	int p;
+// 	int	t;
+
+// 	n = 2;
+// 	p = 1;
+// 	t = ft_iterative_power(n, p);
+// 	printf("resultado: %d", t);
+
+// 	return (0);
 // }

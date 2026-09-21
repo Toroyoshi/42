@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 17:01:05 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/17 17:13:56 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/21 15:48:20 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		dest[i++] = src[j++];
 	}
-	src[j] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -35,9 +35,9 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 // int	main(void)
 // {
-// 	char	dest[100] = "Joao eh ";
+// 	char	dest[100] = "Fala ";
 // //funciona sem o 100 mas pode dar risco de buffer overflow
-// 	char	src[] = "Foda ";
+// 	char	src[] = "Galerinha do youtube";
 
 // 	printf("Antes: %s\n", dest);
 

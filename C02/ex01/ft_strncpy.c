@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 16:44:42 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/20 16:41:21 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/21 15:12:53 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	while (src[i] == '\0' || i <= n)
+	while (i < n)
 	{
 		dest[i] = '\0';
 		i++;
@@ -29,29 +29,20 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 }
 
 // #include <stdio.h>
-// int main(void)
+
+// int	main(void)
 // {
-// 	char *teste;
-// 	char *resultado;
-// 	teste = "Is it woking???";
+// 	char	dest1[200] = "World1";
+// 	char	dest2[200] = "World1";
+// 	char	dest3[200] = "World1";
+// 	char	src[] = "Hello";
 
-// 	unsigned	int j;
-//     unsigned	int	p;
-// 	unsigned	int i;
+// 	ft_strncpy(dest1, src, 3);
+// 	ft_strncpy(dest2, src, 5);
+// 	ft_strncpy(dest3, src, 7);
 
-//     p = 5;
-// 	j = 0;
-// 	i = 0;
-// 	while (j <= p){
-// 		j++;
-// 	} 
-// 	j++;
-
-// 	char dest[j];
-// 	resultado = ft_strncpy(dest, teste, p);
-// 	printf("%s\n", resultado);
-// 	// while (i < p){
-// 	// 	printf("%d\n", i);	
-// 	// 	i++;
-// 	// }
+// 	printf("n = 3: %s\n", dest1);
+// 	printf("n = 5: %s\n", dest2);
+// 	printf("n = 7: %s\n", dest3);
+// 	return (0);
 // }

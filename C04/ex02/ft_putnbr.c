@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 19:28:31 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/20 20:41:51 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/21 16:50:35 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ void	ft_putnbr(int nb)
 {
 	char	c;
 
-	if (nb < 0)
+	if (nb == -2147483648)
+	{
+		write (1, "-2", 2);
+		ft_putnbr(147483648);
+	}
+	else if (nb < 0)
 	{
 		write(1, "-", 1);
 		nb = -nb;
@@ -39,7 +44,7 @@ void	ft_putnbr(int nb)
 // #include <stdio.h>
 // int main (void)
 // {
-// 	ft_putnbr(-14533186);
+// 	ft_putnbr(-123);
 
 // 	return (0);
 // }

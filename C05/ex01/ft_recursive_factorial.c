@@ -1,45 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 19:29:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:46:47 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/21 17:18:57 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/21 17:49:07 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2);
+int	ft_recursive_factorial(int nb);
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_recursive_factorial(int nb)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	if (nb < 0)
 	{
-		if (s1[i] - s2[i] < 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] - s2[i] > 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else
-		{
-			i++;
-		}
+		return (0);
 	}
-	return (0);
+	if (nb == 0 || nb == 1)
+	{
+		return (1);
+	}
+	return (nb * ft_recursive_factorial(nb - 1));
 }
 
 // #include <stdio.h>
-// int main (void)
+// int	main(void)
 // {
-// 	int r;
-// 	r = ft_strcmp("-", "Oi");
-// 	printf("%d", r);
-// 	return 0;
+// 	int	f;
+// 	int	t;
+
+// 	f = -5;
+// 	t = ft_recursive_factorial(f);
+// 	printf("resultado: %d", t);
+
+// 	return (0);
 // }
+// 12! eh o maximo que o int aguenta 
+// 13! =   6 227 020 800 

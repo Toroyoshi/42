@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 19:12:47 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 13:11:42 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/21 20:44:41 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/21 21:01:04 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
+#include <unistd.h>
 
-int	ft_strlen(char *str)
+int main (int argc, char **argv)
 {
-	unsigned int	i;
+    (void)argc;
+    int i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    i = 0;
+    while (argv[0][i] != '\0')
+    {   
+        i++;
+    }
+    write(1, argv[0], i);
+    write(1, "\n", 1);
+    return 0;
 }
-
-// #include <stdio.h>
-// int main (void)
-// {
-// 	int r;
-// 	r = ft_strlen("sera?");
-
-// 	printf("tamanho: %d", r);
-// 	return 0;
-// }
