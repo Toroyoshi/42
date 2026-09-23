@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 20:08:03 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/10 20:19:50 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/21 19:21:15 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	ft_ultimate_div_mod(int *a, int *b)
 //     int a;
 //     int b;
 
-//     a = 69;
-//     b = 42;
+//     a = 11;
+//     b = 2;
 //     ft_ultimate_div_mod(&a, &b);
 //     printf("div: %d, mod: %d\n", a, b);
 //     return (0);

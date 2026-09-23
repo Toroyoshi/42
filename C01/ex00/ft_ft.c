@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 19:39:06 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/20 18:44:44 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/21 19:20:54 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	ft_ft(int *nbr)
 // {
 //     int a;
 // 	a = 67;
-// 	printf("%d\n", a);
+// 	printf("%p\n", &a);
 
 // 	ft_ft(&a);
-// 	printf("%d\n", a);
+// 	printf("%p\n", &a);
 
 //     return (0);
 // }

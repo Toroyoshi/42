@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 17:14:26 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:50:56 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/22 12:28:58 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strstr(char *str, char *to_find)
 // int	main(void)
 // {
 // 	char	str[] = "Ola meu amigo";
-// 	char	to_find[] = "";
+// 	char	to_find[] = "Ola";
 // 	char	*resultado;
 
 // 	resultado = ft_strstr(str, to_find);

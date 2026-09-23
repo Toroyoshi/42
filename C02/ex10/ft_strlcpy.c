@@ -1,48 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/14 16:11:45 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/22 16:51:39 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/22 13:40:36 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/22 16:53:31 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	if (size == 0)
+	{
+		while (src[i] != '\0')
+			i++;
+		return (i);
+	}
+	while (src[i] != '\0' && i < size - 1)
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
-	return (dest);
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }
 
 // #include <stdio.h>
 // int main(void)
 // {
-// 	char *teste;
-// 	char *resultado;
-// 	teste = "is it working?";
+// 	char dest[20];
+// 	char src[] = "Hello, World!";
+// 	unsigned int size = 10;
+// 	unsigned int result;
 
-// 	int j;
+// 	result = ft_strlcpy(dest, src, size);
 
-// 	j = 0;
-// 	while (teste[j] != '\0'){
-// 		j++;
-// 	} 
-// 	j++;
+// 	printf("Source: %s\n", src);
+// 	printf("Destination: %s\n", dest);
+// 	printf("Length of source: %u\n", result);
 
-// 	char dest[j];
-// 	resultado = ft_strcpy(dest, teste);
-
-// 	printf("%s", resultado);
-// 	if (dest[j] == '\0')
-// 		printf("tem");
+// 	return (0);
 // }

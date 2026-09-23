@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 15:48:55 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:16:12 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/22 13:16:40 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ int	ft_str_is_printable(char *str)
 // int main (void)
 // {
 // 	int resultado;
-// 	// char arr2[] = {'a', 'b', 0x03,'\0'}; // If you wanna test in other way
 
 // 	resultado = ft_str_is_printable("arr2 \x7F");
-// 	printf("Result is: %d\n", resultado);
+// 	printf("Result is: %d\n", ft_str_is_printable("0-ajscjn7n1 s"));
+// 	printf("Result is: %d\n", ft_str_is_printable(""));
+// 	printf("Result is: %d\n", ft_str_is_printable(" "));
 // 	return (0);
 // }

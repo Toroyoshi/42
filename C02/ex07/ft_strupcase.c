@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 16:10:02 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/22 12:25:19 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/22 13:23:22 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/22 16:52:09 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strupcase(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while (str[i])
 	{
-		if (s1[i] - s2[i] != 0)
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			return (s1[i] - s2[i]);
+			str[i] = str[i] - 32;
+			i++;
 		}
 		else
 		{
 			i++;
 		}
 	}
-	return (0);
+	return (str);
 }
 
 // #include <stdio.h>
-// int main (void)
+
+// char	*ft_strupcase(char *str);
+
+// int	main(void)
 // {
-// 	int r;
-// 	r = ft_strncmp("Oi", "Oi", 10);
-// 	printf("%d", r);
+// 	char	str[] = "dylalfaw";
+
+// 	printf("Antes:  %s\n", str);
+// 	ft_strupcase(str);
+// 	printf("Depois: %s\n", str);
 // 	return (0);
 // }

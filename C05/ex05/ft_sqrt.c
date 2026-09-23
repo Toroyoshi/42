@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 16:10:02 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/22 12:25:19 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/22 15:04:51 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/22 15:17:30 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_sqrt(int nb)
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	i = 1;
+	while (i <= (nb / i))
 	{
-		if (s1[i] - s2[i] != 0)
+		if ((i * i) == nb)
 		{
-			return (s1[i] - s2[i]);
+			return (i);
 		}
-		else
-		{
-			i++;
-		}
+		i++;
 	}
-	return (0);
+	if ((i * i) != nb)
+	{
+		return (0);
+	}
+	return (i);
 }
 
 // #include <stdio.h>
 // int main (void)
 // {
-// 	int r;
-// 	r = ft_strncmp("Oi", "Oi", 10);
-// 	printf("%d", r);
+// 	int nb;
+
+// 	nb = 253;
+// 	printf("sqrt of %d = %d", nb , ft_sqrt(nb));
 // 	return (0);
 // }

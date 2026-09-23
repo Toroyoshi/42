@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 16:10:02 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/22 12:25:19 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/23 13:04:50 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/23 15:51:29 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
+#include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while (str[i] != '\0')
 	{
-		if (s1[i] - s2[i] != 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else
-		{
-			i++;
-		}
+		i++;
+	}
+	return (i);
+}
+
+int	main(int ac, char **av)
+{
+	int	i;
+	int	l;
+
+	i = 1;
+	l = 0;
+	while (i < ac && ac != 0)
+	{
+		l = ft_strlen(av[ac - i]);
+		write(1, av[ac - i], l);
+		write(1, "\n", 1);
+		i++;
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main (void)
-// {
-// 	int r;
-// 	r = ft_strncmp("Oi", "Oi", 10);
-// 	printf("%d", r);
-// 	return (0);
-// }

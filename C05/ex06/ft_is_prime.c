@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 16:10:02 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/22 12:25:19 by jovitor          ###   ########.fr       */
+/*   Created: 2026/09/22 15:16:43 by jovitor           #+#    #+#             */
+/*   Updated: 2026/09/22 21:27:33 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_is_prime(int nb)
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	i = 1;
+	if ((nb == 2) || (nb == 3))
 	{
-		if (s1[i] - s2[i] != 0)
-		{
-			return (s1[i] - s2[i]);
-		}
-		else
-		{
-			i++;
-		}
+		return (1);
 	}
-	return (0);
+	if ((nb % 2 == 0) || (nb % 3 == 0) || (nb <= 1))
+	{
+		return (0);
+	}
+	while (i < nb)
+	{
+		if ((nb < i) && (nb % i == 0))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
 
 // #include <stdio.h>
 // int main (void)
 // {
-// 	int r;
-// 	r = ft_strncmp("Oi", "Oi", 10);
-// 	printf("%d", r);
+// 	int nb;
+
+// 	nb = 4;
+// 	printf("Primo retorna 1: nr(%d), resultado: %d", nb, ft_is_prime(nb));
 // 	return (0);
 // }

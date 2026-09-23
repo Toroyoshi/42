@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 16:44:42 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/21 15:12:53 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/22 16:51:48 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 // 	ft_strncpy(dest1, src, 3);
 // 	ft_strncpy(dest2, src, 5);
-// 	ft_strncpy(dest3, src, 7);
+// 	ft_strncpy(dest3, src, 26);
 
 // 	printf("n = 3: %s\n", dest1);
 // 	printf("n = 5: %s\n", dest2);
-// 	printf("n = 7: %s\n", dest3);
+// 	printf("n = 26: %s\n", dest3);
+
+// 	if (src[5] == '\0')
+// 	printf("ss");
 // 	return (0);
 // }

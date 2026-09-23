@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:22:21 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/15 19:01:17 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/09/22 13:16:31 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,12 @@ int	ft_str_is_alpha(char *str)
 // #include <stdio.h>
 // int main (void)
 // {
-// 	int resultado;
+// 	int resultado1;
 
-// 	resultado = ft_str_is_alpha("grnrsgsdnFoi");
+// 	resultado1 = ft_str_is_alpha("grnrsgsdnFoi");
 
-// 	printf("Result is: %d\n", resultado);
+// 	printf("Result is: %d\n", resultado1);
+// 	printf("Result is: %d\n", ft_str_is_alpha("aoai-e"));
+// 	printf("Result is: %d\n", ft_str_is_alpha("     a"));
 // 	return (0);
 // }
